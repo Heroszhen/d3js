@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+	  
+	  
+    <div class="m-3" >
+		<svg width="500" height="500" id="mysvg"></svg>
+    </div>
+    
+	
+	<script src="https://d3js.org/d3.v5.min.js"></script>
+    <script>
+		var data = [10,20,30,40];
+		var mysvg = d3.select("#mysvg");
+		var xpoint = 10;
+		var maxv = 40;
+	
+		data.forEach((elm,index)=>{
+			let y = (maxv - elm);
+			let circle = mysvg
+			.append("rect")
+			.attr('stroke','black')
+			.attr('x',xpoint)
+			.attr('y',maxv)
+			.attr('width',20)
+			.attr('height',0)
+			.attr('fill','yellow');
+			
+			//https://bl.ocks.org/guilhermesimoes/be6b8be8a3e8dc2b70e2
+			circle.transition()
+			.duration(2000)
+			.attr('y',y)
+			.attr('height',elm);
+			
+			xpoint += 30;
+		}); 	
+		
+    </script>
+  </body>
+</html>

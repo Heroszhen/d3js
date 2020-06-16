@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+	  
+    <h1 class="mb-5">Hello, world!</h1>
+    
+    <svg width="200" height="200" id="mysvg"></svg>
+    <div>
+		<svg width="500">
+			<rect x="10" y="0" width="50" height="100"></rect>
+			<rect x="70" y="0" width="50" height="100"></rect>
+		</svg>
+    </div>
+    
+	
+	<script src="https://d3js.org/d3.v5.min.js"></script>
+    <script>
+		/*
+		d3.select("h1").style("color","red")
+		.attr("class","font-weight-bold")
+		.text("zhen est le plus grand héros du monde");
+		*/
+		
+		//select the svg
+		let mysvg = d3.select("#mysvg");
+		
+		//create a group
+		let maingroup = mysvg
+		.append('g')
+		.attr('transform',`translate(${100},${100})`);
+		
+		//create a circle
+		let circle = maingroup
+		.append("circle")
+		.attr('stroke','black')
+		.attr('r','66')
+		.attr('fill','yellow');
+		
+		console.log(d3.select("h1").text());
+    </script>
+  </body>
+</html>

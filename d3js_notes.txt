@@ -1,0 +1,14 @@
+<script src="https://d3js.org/d3.v5.min.js"></script>
+https://www.tutorialsteacher.com/d3js/select-dom-element-using-d3js
+
+---select
+d3.select(..);    //select one tag, one id or first class found
+d3.selectAll(..);
+
+---method
+text(...), append(...), remove() , html(....); attr("nam","value"), property("name","value"),
+style("",""), classed("",value),
+
+
+---function
+https://www.tutorialsteacher.com/d3js/function-of-data-in-d3js
